@@ -1,439 +1,401 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FamilyCore — Семейное ядро</title>
-  <meta name="description" content="FamilyCore — договорённости, планы и ответственность для семьи. Без шума, без хаоса. Единая точка правды.">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◈</text></svg>">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FamilyCore — Семейное ядро</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ===== NAV ===== -->
-<nav class="nav" id="nav">
+<!-- NAV -->
+<nav id="nav">
   <div class="nav-inner">
     <a href="#" class="nav-logo">
-      <span class="nav-logo-icon">◈</span>
-      <span class="nav-logo-text">
-        <span class="nav-logo-main">FamilyCore</span>
+      <div class="nav-logo-icon">◈</div>
+      <div>
+        <span class="nav-logo-text">FamilyCore</span>
         <span class="nav-logo-sub">Семейное ядро</span>
-      </span>
+      </div>
     </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Меню">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#problem">Проблема</a></li>
-      <li><a href="#how">Как работает</a></li>
-      <li><a href="#features">Возможности</a></li>
-      <li><a href="#faq">Вопросы</a></li>
-      <li><a href="#access" class="nav-cta">Ранний доступ</a></li>
-      <li><a href="index-en.html" class="nav-lang">EN</a></li>
-    </ul>
+    <div class="nav-links">
+      <a href="#problem">Проблема</a>
+      <a href="#briefing">Как работает</a>
+      <a href="#values">Возможности</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#access" class="nav-cta">Ранний доступ</a>
+    </div>
   </div>
 </nav>
 
-<!-- ===== HERO ===== -->
-<section class="hero">
+<!-- HERO -->
+<section class="hero" id="top">
   <div class="container">
-    <div class="hero-inner">
-      <div class="hero-badge">
-        <span class="hero-badge-dot"></span>
-        Ранний доступ открыт
-      </div>
-      <h1>Меньше хаоса.<br><em>Больше жизни.</em></h1>
-      <p class="hero-sub">FamilyCore — семейное ядро для договорённостей, планов и ответственности. Не ещё один таск-менеджер, а&nbsp;единая точка правды, где информация превращается в&nbsp;ясность.</p>
-      <div class="hero-actions">
-        <a href="#access" class="btn btn-primary">Получить ранний доступ</a>
-        <a href="#how" class="btn btn-ghost">Как это работает</a>
-      </div>
+    <div class="hero-badge">Ранний доступ открыт</div>
+    <h1>«Я&nbsp;думала, ты заберёшь». <em>«А&nbsp;я&nbsp;не&nbsp;обещал».</em></h1>
+    <p class="hero-sub">FamilyCore собирает задачи, планы и&nbsp;договорённости семьи в&nbsp;одном месте&nbsp;— и&nbsp;следит, чтобы ничего не&nbsp;потерялось. Каждый знает, что на&nbsp;нём.</p>
+    <div class="hero-actions">
+      <a href="#access" class="btn-primary">Попробовать первым →</a>
+      <a href="#briefing" class="btn-secondary">Как это выглядит</a>
     </div>
   </div>
 </section>
 
-<!-- ===== PROBLEM ===== -->
-<section class="problem" id="problem">
+<!-- PROBLEM — TIMELINE -->
+<section class="timeline-section" id="problem">
   <div class="container">
-    <span class="section-label">Знакомо?</span>
-    <h2 class="section-title">Семейная жизнь стала реактивной</h2>
-    <p class="section-desc">Вы не управляете днём — вы реагируете на него. А&nbsp;ощущение «я ничего не успеваю» только растёт.</p>
-    <div class="problem-grid">
-      <div class="problem-card">
-        <div class="problem-icon">📱</div>
-        <h3>Информационный шум</h3>
-        <p>Десятки чатов, календарей, заметок и голосовых. Важное тонет в потоке — и&nbsp;никто не помнит, о&nbsp;чём договорились.</p>
+    <div class="section-label">Знакомо?</div>
+    <div class="section-title">Обычный вторник</div>
+    <p class="section-sub">Никто не виноват. Информация была — просто в&nbsp;разных чатах.</p>
+
+    <div class="timeline">
+
+      <div class="tl-item reveal">
+        <div class="tl-time">
+          <span class="tl-hour">7:30</span>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-content">
+          <p>Вы спрашиваете в&nbsp;семейном чате: <strong>«Кто забирает Машу?»</strong> Никто не&nbsp;отвечает.</p>
+        </div>
       </div>
-      <div class="problem-card">
-        <div class="problem-icon">🤝</div>
-        <h3>Размытая ответственность</h3>
-        <p>«Я думала, ты заберёшь». «А я не обещал». Без фиксации договорённости живут ровно один разговор.</p>
+
+      <div class="tl-item reveal">
+        <div class="tl-time">
+          <span class="tl-hour">9:15</span>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-content">
+          <p>Бабушка пишет в&nbsp;личку: <strong>«Маша сегодня к&nbsp;ортодонту в&nbsp;16:00»</strong>. Вы&nbsp;не&nbsp;видели&nbsp;— были на&nbsp;совещании.</p>
+        </div>
       </div>
-      <div class="problem-card">
-        <div class="problem-icon">🧠</div>
-        <h3>Когнитивная перегрузка</h3>
-        <p>Один взрослый держит в голове расписание, логистику, покупки, задачи детей. Mental load распределён неравномерно.</p>
+
+      <div class="tl-item reveal">
+        <div class="tl-time">
+          <span class="tl-hour">10:40</span>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-content">
+          <p>В&nbsp;чате танцевальной студии: <strong>«Занятие перенесено с&nbsp;15:00 на&nbsp;18:00»</strong>. Сообщение утонуло в&nbsp;30&nbsp;других. Вы&nbsp;его не&nbsp;заметили.</p>
+        </div>
       </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-time">
+          <span class="tl-hour">12:00</span>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-content">
+          <p>Муж пишет: <strong>«Я&nbsp;думал, ты забираешь»</strong>. Вы&nbsp;тоже так думали про&nbsp;него.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-time">
+          <span class="tl-hour">15:40</span>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-content tl-stress">
+          <p><strong>Маша ждёт у&nbsp;школы.</strong> Вы&nbsp;едете через весь город. Запись к&nbsp;ортодонту — пропущена. А&nbsp;про танцы в&nbsp;18:00 вы&nbsp;узнаете только вечером.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal">
+        <div class="tl-time">
+          <span class="tl-hour">21:30</span>
+          <div class="tl-dot"></div>
+        </div>
+        <div class="tl-content tl-stress">
+          <p>Вы&nbsp;засыпаете с&nbsp;ощущением, что <strong>завтра будет так&nbsp;же</strong>.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="timeline-conclusion">
+      <p>А&nbsp;теперь — <em>тот&nbsp;же вторник с&nbsp;FamilyCore</em></p>
     </div>
   </div>
 </section>
 
-<!-- ===== HOW IT WORKS ===== -->
-<section class="how" id="how">
+<!-- BRIEFING -->
+<section class="briefing-section" id="briefing">
   <div class="container">
-    <span class="section-label">Как работает</span>
-    <h2 class="section-title">От информации — к договорённости</h2>
-    <p class="section-desc">FamilyCore не просто хранит задачи. Он превращает информацию в&nbsp;подтверждённые семейные договорённости — с&nbsp;ответственным и сроком.</p>
-    <div class="how-steps">
-      <div class="step">
-        <span class="step-num">01</span>
-        <h3>Запишите</h3>
-        <p>Отправьте задачу, событие, заметку или напоминание. Подключите календарь — и&nbsp;события подтянутся сами.</p>
-      </div>
-      <div class="step">
-        <span class="step-num">02</span>
-        <h3>Подтвердите</h3>
-        <p>Ничто не становится фактом автоматически. Каждый элемент требует явного «да» или «нет» от участника семьи.</p>
-      </div>
-      <div class="step">
-        <span class="step-num">03</span>
-        <h3>Действуйте</h3>
-        <p>Подтверждённые договорённости видны всем, кому нужно. Ответственный назначен, срок зафиксирован.</p>
-      </div>
-      <div class="step">
-        <span class="step-num">04</span>
-        <h3>Будьте в курсе</h3>
-        <p>Утренний брифинг покажет, что ждёт внимания. Без лишнего шума, с&nbsp;учётом роли каждого члена семьи.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="section-label">Как работает</div>
+    <div class="section-title">Тот&nbsp;же вторник. Другое утро.</div>
+    <p class="section-sub">Брифинг собирает всё, что важно — и&nbsp;показывает только вам, только то, что нужно.</p>
 
-<!-- ===== BRIEFING HIGHLIGHT ===== -->
-<section class="highlight-section">
-  <div class="container">
-    <div class="highlight-row">
-      <div class="highlight-visual">
-        <div class="briefing-mock">
-          <div class="mock-header">
-            <div class="mock-avatar">☀</div>
+    <div class="briefing-layout">
+
+      <div class="briefing-text">
+        <div class="briefing-points">
+          <div class="bp-item reveal">
+            <div class="bp-icon green">✓</div>
             <div>
-              <div class="mock-greeting">Доброе утро, Анна</div>
-              <div class="mock-time">Понедельник, 10 февраля · 3 ожидают</div>
+              <h4>Мониторит чаты, которые вы разрешили</h4>
+              <p>Студия перенесла танцы? Школа отменила уроки? FamilyCore заметит изменение в&nbsp;чате и&nbsp;обновит семейный контекст автоматически.</p>
             </div>
           </div>
-          <div class="mock-items">
-            <div class="mock-item">
-              <span class="mock-dot dot-yellow"></span>
-              Забрать Мишу из школы в 15:30
-              <span class="mock-item-kind">задача</span>
-            </div>
-            <div class="mock-item">
-              <span class="mock-dot dot-green"></span>
-              Родительское собрание — четверг 18:00
-              <span class="mock-item-kind">событие</span>
-            </div>
-            <div class="mock-item">
-              <span class="mock-dot dot-coral"></span>
-              Продлить страховку до пятницы
-              <span class="mock-item-kind">напоминание</span>
-            </div>
-            <div class="mock-item">
-              <span class="mock-dot dot-purple"></span>
-              Записать Лену к ортодонту
-              <span class="mock-item-kind">задача</span>
+          <div class="bp-item reveal">
+            <div class="bp-icon accent">⚡</div>
+            <div>
+              <h4>Ответственность зафиксирована</h4>
+              <p>«Я&nbsp;заберу»&nbsp;— это не&nbsp;сообщение в&nbsp;чат, а&nbsp;подтверждённая договорённость с&nbsp;именем и&nbsp;временем.</p>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="highlight-content">
-        <span class="section-label">Брифинг</span>
-        <h2 class="section-title">Ваша повестка — без шума</h2>
-        <p class="section-desc">FamilyCore не требует постоянного внимания. Брифинг показывает только то, что важно именно вам — с&nbsp;учётом вашей роли в семье.</p>
-        <ul class="highlight-list">
-          <li>Каждый видит только то, что ему нужно</li>
-          <li>Просроченные предложения уходят автоматически</li>
-          <li>Подтверждённые задачи — в общей ленте семьи</li>
-          <li>Только факты и договорённости — никаких «галлюцинаций»</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== SAFETY HIGHLIGHT ===== -->
-<section class="highlight-section highlight-bg">
-  <div class="container">
-    <div class="highlight-row reverse">
-      <div class="highlight-visual">
-        <div class="safe-mock">
-          <div class="safe-badge">
-            🛡 Safe Mode · активирован
+          <div class="bp-item reveal">
+            <div class="bp-icon amber">👤</div>
+            <div>
+              <h4>Каждый видит своё</h4>
+              <p>Андрей получил брифинг со&nbsp;страховкой. Маша&nbsp;— только свои задачи. Бабушка&nbsp;— расписание внуков.</p>
+            </div>
           </div>
-          <div class="safe-items">
-            <div class="safe-item">
-              <span class="safe-item-icon">🔒</span>
-              Доступы ограничены до минимума
-            </div>
-            <div class="safe-item">
-              <span class="safe-item-icon">📋</span>
-              Все действия записываются в журнал
-            </div>
-            <div class="safe-item">
-              <span class="safe-item-icon">👤</span>
-              Брифинги могут быть раздельными
-            </div>
-            <div class="safe-item">
-              <span class="safe-item-icon">🔔</span>
-              Все участники уведомлены
+          <div class="bp-item reveal">
+            <div class="bp-icon green">🤖</div>
+            <div>
+              <h4>Предлагает, а не решает за вас</h4>
+              <p>Видит, что дедушка свободен в&nbsp;18:00 — и&nbsp;предлагает попросить его. Но&nbsp;только вы&nbsp;нажимаете кнопку. Никаких автодействий.</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="highlight-content">
-        <span class="section-label">Безопасность</span>
-        <h2 class="section-title">Для реальной жизни, а&nbsp;не идеальной</h2>
-        <p class="section-desc">Разводы, конфликты, сложные периоды — FamilyCore это учитывает. Safe Mode защищает каждого участника в&nbsp;трудных ситуациях.</p>
-        <ul class="highlight-list">
-          <li>Любой взрослый может включить защитный режим</li>
-          <li>Журнал действий, который нельзя удалить</li>
-          <li>Вы управляете своими данными и&nbsp;доступами — никакого скрытого общего доступа</li>
-          <li>При смене семейного контекста ваша история сохраняется</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ===== FEATURES ===== -->
-<section class="features" id="features">
-  <div class="container">
-    <span class="section-label">Возможности</span>
-    <h2 class="section-title">Что умеет FamilyCore</h2>
-    <p class="section-desc">Не список дел, а система, которая фиксирует ответственность и&nbsp;помогает семье жить организованно.</p>
-    <div class="features-grid">
+      <div class="briefing-mock reveal">
+        <div class="bm-header">
+          <div class="bm-greeting">Доброе утро,</div>
+          <div class="bm-name">Анна ☀️</div>
+          <div class="bm-date">вторник, 11 февраля · 4&nbsp;ожидают внимания</div>
+        </div>
+        <div class="bm-body">
 
-      <div class="feature-card">
-        <div class="feature-icon fi-green">📥</div>
-        <h3>Задачи, события, заметки</h3>
-        <p>Всё в одном месте: что нужно сделать, когда это происходит, что важно запомнить. С&nbsp;назначением ответственного.</p>
-      </div>
+          <div class="bm-section">
+            <div class="bm-label warning">⚠ Ждёт подтверждения</div>
+            <div class="bm-card needs-action">
+              <div class="bm-card-title">Забрать Машу из школы — 15:30</div>
+              <div class="bm-card-meta">
+                <span>Пока не подтверждено. Кто заберёт?</span>
+              </div>
+              <div class="bm-actions">
+                <button class="bm-btn bm-btn-yes">Я заберу</button>
+                <button class="bm-btn bm-btn-no">Не я</button>
+              </div>
+            </div>
+          </div>
 
-      <div class="feature-card">
-        <div class="feature-icon fi-yellow">✅</div>
-        <h3>Явные подтверждения</h3>
-        <p>Ничто не считается договорённостью, пока не подтверждено. Это исключает «я не знал» и «мы не договаривались».</p>
-      </div>
+          <div class="bm-section">
+            <div class="bm-label today">📅 Сегодня</div>
+            <div class="bm-card">
+              <div class="bm-card-title">🦷 Ортодонт Маша — 16:00</div>
+              <div class="bm-card-meta">
+                <span>Добавлено бабушкой вчера</span>
+                <span>↳ нужно выехать из школы сразу</span>
+              </div>
+            </div>
+          </div>
 
-      <div class="feature-card">
-        <div class="feature-icon fi-coral">☀️</div>
-        <h3>Брифинги</h3>
-        <p>Утренняя сводка для каждого — что ждёт подтверждения, что запланировано, что просрочено. Только то, что касается вас.</p>
-      </div>
+          <div class="bm-section">
+            <div class="bm-label insight">💡 Из чатов</div>
+            <div class="bm-card bm-card-insight">
+              <div class="bm-card-title">💬 Танцы Маши перенесены: 15:00 → 18:00</div>
+              <div class="bm-card-meta">
+                <span>Обнаружено в чате студии «Грация» сегодня в 10:40</span>
+                <span class="bm-insight-line">↳ Мама и папа в 18:00 заняты. Дедушка свободен — попросить его отвезти?</span>
+              </div>
+              <div class="bm-actions">
+                <button class="bm-btn bm-btn-yes">Попросить дедушку</button>
+                <button class="bm-btn bm-btn-no">Решу сам(а)</button>
+              </div>
+            </div>
+          </div>
 
-      <div class="feature-card">
-        <div class="feature-icon fi-purple">👥</div>
-        <h3>Роли и приватность</h3>
-        <p>Взрослые, подростки, дети, гости — у каждого свой уровень доступа. Ребёнок видит только свои задачи.</p>
-      </div>
+          <div class="bm-section">
+            <div class="bm-label confirmed">✅ Подтверждено</div>
+            <div class="bm-card">
+              <div class="bm-card-title">
+                Продлить страховку — до пятницы
+                <span class="bm-tag green">Андрей</span>
+              </div>
+            </div>
+            <div class="bm-card">
+              <div class="bm-card-title">
+                Родительское собрание — четверг 18:00
+                <span class="bm-tag green">Анна</span>
+              </div>
+            </div>
+          </div>
 
-      <div class="feature-card">
-        <div class="feature-icon fi-green">📅</div>
-        <h3>Импорт календарей</h3>
-        <p>Подключите семейные календари — события появятся в&nbsp;общем контексте и будут ждать подтверждения.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon fi-yellow">🔔</div>
-        <h3>Тихие уведомления</h3>
-        <p>Минимальные и настраиваемые. По умолчанию — только то, что требует вашего подтверждения или влияет на вас.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon fi-coral">🛡</div>
-        <h3>Safe Mode</h3>
-        <p>Режим защиты для сложных ситуаций: ограничение доступов, раздельные брифинги, полный журнал действий.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon fi-purple">👶→🧑</div>
-        <h3>Растёт с семьёй</h3>
-        <p>Ребёнок становится подростком, подросток — взрослым. Роль меняется, но история и данные сохраняются.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon fi-green">🏠</div>
-        <h3>Реальные семьи</h3>
-        <p>Несколько домов, новые партнёры, няни и бабушки. FamilyCore проектируется для жизни, а не для рекламной картинки.</p>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ===== PRINCIPLES ===== -->
-<section class="principles" id="principles">
+<!-- VALUES -->
+<section class="values-section" id="values">
   <div class="container">
-    <span class="section-label">Принципы</span>
-    <h2 class="section-title">Во что мы верим</h2>
-    <p class="section-desc">FamilyCore строится на принципах, которые не подлежат компромиссу.</p>
-    <div class="principles-grid">
-      <div class="principle">
-        <h3>🔐 Каждый управляет своими данными</h3>
-        <p>Вы контролируете свои данные и доступы. Семейное — общее по правилам семьи, личное — личное. Никакого скрытого доступа.</p>
+    <div class="section-label" style="text-align:center;">Три вещи, которые меняют всё</div>
+    <div class="section-title" style="text-align:center; max-width:600px; margin: 0 auto 56px;">Не список дел, а&nbsp;система договорённостей</div>
+
+    <div class="values-grid">
+
+      <div class="value-card reveal">
+        <div class="value-num">01</div>
+        <h3>Договорённости, а&nbsp;не&nbsp;задачи</h3>
+        <p>Ничто не&nbsp;считается решённым, пока оба не&nbsp;сказали «да». Больше никаких «я&nbsp;думал, ты...».</p>
+        <div class="before-after">
+          <div class="ba-row">
+            <span class="ba-label before">Было</span>
+            <span class="ba-text">«Забрать ребёнка» — задача в&nbsp;списке</span>
+          </div>
+          <div class="ba-row">
+            <span class="ba-label after">Стало</span>
+            <span class="ba-text">Кто именно? Подтвердил? Когда?</span>
+          </div>
+        </div>
       </div>
-      <div class="principle">
-        <h3>🤖 Технологии помогают, а не решают</h3>
-        <p>Автоматизация предлагает варианты и суммирует контекст. Но только человек подтверждает договорённости. Никаких автодействий.</p>
+
+      <div class="value-card reveal">
+        <div class="value-num">02</div>
+        <h3>Читает ваши чаты — с&nbsp;вашего разрешения</h3>
+        <p>Подключите чаты школы, кружков, врачей. FamilyCore заметит изменения и&nbsp;обновит контекст. Вы&nbsp;больше не&nbsp;пропустите перенос занятия.</p>
+        <div class="before-after">
+          <div class="ba-row">
+            <span class="ba-label before">Было</span>
+            <span class="ba-text">Сообщение утонуло в&nbsp;30&nbsp;других</span>
+          </div>
+          <div class="ba-row">
+            <span class="ba-label after">Стало</span>
+            <span class="ba-text">Изменение в&nbsp;брифинге + предложение решения</span>
+          </div>
+        </div>
       </div>
-      <div class="principle">
-        <h3>🛡 Безопасность важнее удобства</h3>
-        <p>Мы не жертвуем защитой ради красивого UX. Если нужно выбирать между «удобно» и «безопасно» — выберем безопасно.</p>
+
+      <div class="value-card reveal">
+        <div class="value-num">03</div>
+        <h3>Для реальных семей, а&nbsp;не&nbsp;рекламных</h3>
+        <p>Несколько домов после развода. Няня, которой нужно расписание. Подросток с&nbsp;растущей автономией. FamilyCore спроектирован для жизни.</p>
+        <div class="before-after">
+          <div class="ba-row">
+            <span class="ba-label before">Было</span>
+            <span class="ba-text">«Пригласите семью» — мама, папа, 2&nbsp;ребёнка</span>
+          </div>
+          <div class="ba-row">
+            <span class="ba-label after">Стало</span>
+            <span class="ba-text">Роли, контексты, защитный режим</span>
+          </div>
+        </div>
       </div>
-      <div class="principle">
-        <h3>🤝 Помощь, а не контроль</h3>
-        <p>FamilyCore — это ассистент, который помогает договориться. Не инструмент слежки, не родительский контроль, не трекер.</p>
-      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ===== FAQ ===== -->
-<section class="faq" id="faq">
+<!-- FAQ -->
+<section class="faq-section" id="faq">
   <div class="container">
-    <span class="section-label">Частые вопросы</span>
-    <h2 class="section-title">Три вопроса, которые задают первыми</h2>
+    <div class="section-label" style="text-align:center;">Вопросы</div>
+    <div class="section-title" style="text-align:center; max-width:500px; margin: 0 auto 48px;">То, что вы&nbsp;точно спросите</div>
+
     <div class="faq-grid">
-      <div class="faq-card">
-        <h3>Это не контроль за детьми?</h3>
-        <p>Нет. FamilyCore — про семейные договорённости, а не слежку. Ребёнок видит только свои задачи. Родитель видит общий контекст — но не переписки, не геолокацию, не экранное время.</p>
+
+      <div class="faq-item reveal">
+        <h4>Что если муж / жена не&nbsp;хочет подключаться?</h4>
+        <p>FamilyCore полезен даже для одного. Вы&nbsp;получаете брифинги, фиксируете задачи и&nbsp;события. Когда второй увидит, что вы&nbsp;ничего не&nbsp;забываете — подключится сам.</p>
       </div>
-      <div class="faq-card">
-        <h3>Кто видит мои данные?</h3>
-        <p>Вы управляете доступом. Личные данные — только ваши. Семейные договорённости видны участникам в рамках их ролей. Никакого скрытого общего доступа.</p>
+
+      <div class="faq-item reveal">
+        <h4>Чем это отличается от&nbsp;Google&nbsp;Calendar?</h4>
+        <p>Календарь показывает, когда событие. FamilyCore показывает, кто за&nbsp;него отвечает и&nbsp;подтвердил&nbsp;ли. Разница — между «в&nbsp;календаре было» и&nbsp;«мы&nbsp;договорились».</p>
       </div>
-      <div class="faq-card">
-        <h3>Что происходит в Safe Mode?</h3>
-        <p>Safe Mode — это режим для сложных периодов. Доступы ограничиваются, брифинги могут стать раздельными, все действия записываются. Любой взрослый может включить его в любой момент.</p>
+
+      <div class="faq-item reveal">
+        <h4>Это бесплатно?</h4>
+        <p>Сейчас — да. Мы&nbsp;ищем первые семьи, чтобы вместе довести продукт. Вы&nbsp;получаете доступ бесплатно, мы&nbsp;— вашу обратную связь.</p>
       </div>
+
+      <div class="faq-item reveal">
+        <h4>А&nbsp;если в&nbsp;семье сложный период?</h4>
+        <p>FamilyCore это учитывает. Есть защитный режим: раздельные брифинги, ограничение доступов, журнал действий. Ваши данные управляются вами — семейное общее по&nbsp;правилам семьи, личное — личное.</p>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ===== EARLY ACCESS (CTA + CONTACT FORM) ===== -->
-<section class="contact-section" id="access">
+<!-- CTA -->
+<section class="cta-section" id="access">
   <div class="container">
-    <div class="contact-wrapper">
-      <div class="contact-info">
-        <span class="section-label">Ранний доступ</span>
-        <h2 class="section-title">Попробуйте первыми</h2>
-        <p class="section-desc">FamilyCore в стадии раннего доступа. Оставьте контакт — мы напишем, когда будет готово для вашей семьи. Или просто задайте вопрос.</p>
-        <div class="contact-email-block">
-          <span class="contact-email-label">Или напрямую:</span>
-          <a href="mailto:contact@familycore.app" class="contact-email-link">contact@familycore.app</a>
-        </div>
-      </div>
-      <div class="contact-form-card">
-        <form id="contactForm" class="contact-form">
-          <input type="text" name="_honey" style="display:none">
+    <div class="section-label">Ранний доступ</div>
+    <div class="section-title">Попробуйте первыми</div>
+    <p class="section-sub">Оставьте email — мы&nbsp;напишем, когда будет готово для вашей семьи. Без&nbsp;спама.</p>
 
-          <div class="form-group">
-            <label for="name">Имя</label>
-            <input type="text" id="name" name="name" required placeholder="Как к вам обращаться">
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="your@email.com">
-          </div>
-          <div class="form-group">
-            <label for="message">Сообщение <span class="label-hint">(необязательно)</span></label>
-            <textarea id="message" name="message" rows="4" placeholder="Расскажите о своей семье, задайте вопрос или просто напишите «хочу попробовать»"></textarea>
-          </div>
-          <button type="submit" id="submitBtn" class="btn btn-primary btn-full">Запросить ранний доступ</button>
-        </form>
-        <div id="thankYou" class="thank-you" style="display:none;">
-          <div class="thank-you-icon">✓</div>
-          <h3>Спасибо!</h3>
-          <p>Мы получили ваш запрос и свяжемся, когда FamilyCore будет готов для вашей семьи.</p>
-        </div>
+    <form class="cta-form" onsubmit="handleSubmit(event)">
+      <div class="cta-row">
+        <input type="text" class="cta-input" placeholder="Имя" name="name">
+        <input type="email" class="cta-input" placeholder="Email *" name="email" required>
       </div>
-    </div>
+      <textarea class="cta-input" placeholder="Что больше всего раздражает в семейной организации?" name="message"></textarea>
+      <button type="submit" class="cta-submit">Хочу попробовать</button>
+      <p class="cta-note">Мы уважаем ваши данные. Никакого спама — только приглашение, когда будет готово.</p>
+    </form>
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-copy">© 2025 FamilyCore. Меньше хаоса. Больше ясности.</div>
-      <ul class="footer-links">
-        <li><a href="index-en.html">English</a></li>
-        <li><a href="#features">Возможности</a></li>
-        <li><a href="#faq">Вопросы</a></li>
-        <li><a href="mailto:contact@familycore.app">contact@familycore.app</a></li>
-      </ul>
-    </div>
-  </div>
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 FamilyCore · Меньше хаоса. Больше ясности. · <a href="mailto:contact@familycore.app">contact@familycore.app</a></p>
 </footer>
 
 <script>
+// Nav shadow on scroll
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 40);
+  nav.classList.toggle('scrolled', window.scrollY > 20);
 });
 
-const toggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
-toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-navLinks.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => navLinks.classList.remove('open'));
-});
+// Scroll-reveal observer
+(function () {
+  const els = document.querySelectorAll('.reveal');
+  if (!els.length) return;
 
-// AJAX form — no redirect
-const form = document.getElementById('contactForm');
-const thanks = document.getElementById('thankYou');
-const submitBtn = document.getElementById('submitBtn');
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -32px 0px' }
+  );
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Отправка…';
-
-  const data = new FormData(form);
-  data.append('_subject', 'FamilyCore — запрос раннего доступа');
-  data.append('_template', 'box');
-  data.append('_captcha', 'false');
-
-  try {
-    await fetch('https://formsubmit.co/ajax/contact@familycore.app', {
-      method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
-    form.style.display = 'none';
-    thanks.style.display = 'flex';
-  } catch (err) {
-    submitBtn.disabled = false;
-    submitBtn.textContent = 'Запросить ранний доступ';
-    alert('Не удалось отправить. Попробуйте написать на contact@familycore.app напрямую.');
-  }
-});
-
-// Scroll reveal
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.style.opacity = '1';
-      e.target.style.transform = 'translateY(0)';
-    }
+  els.forEach((el, i) => {
+    el.style.transitionDelay = (i % 6) * 80 + 'ms';   // stagger within viewport groups
+    io.observe(el);
   });
-}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+})();
 
-document.querySelectorAll('.problem-card, .step, .feature-card, .principle, .faq-card, .highlight-row > *, .contact-wrapper > *').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-  observer.observe(el);
+// Form submit
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.cta-submit');
+  btn.textContent = '✓ Спасибо! Мы свяжемся.';
+  btn.style.background = '#3D8B6E';
+  btn.disabled = true;
+}
+
+// Smooth anchor scroll
+document.querySelectorAll('a[href^="#"]').forEach((a) => {
+  a.addEventListener('click', (e) => {
+    e.preventDefault();
+    const t = document.querySelector(a.getAttribute('href'));
+    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
 });
 </script>
 
