@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FamilyCore — Family Coordination Hub</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,10 +16,10 @@
 <nav id="nav">
   <div class="nav-inner">
     <a href="#" class="nav-logo">
-      <div class="nav-logo-icon">◈</div>
+      <img src="favicon.svg" alt="" class="nav-logo-icon">
       <div>
         <span class="nav-logo-text">FamilyCore</span>
-        <span class="nav-logo-sub">Family Hub</span>
+        <span class="nav-logo-sub"></span>
       </div>
     </a>
     <div class="nav-links">
@@ -376,13 +377,4 @@ function handleSubmit(e) {
 }
 
 // Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(function (a) {
-  a.addEventListener('click', function (e) {
-    e.preventDefault();
-    var t = document.querySelector(a.getAttribute('href'));
-    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
-</script>
-</body>
-</html>
+document.querySelectorAll('a[href^="#"]').forEach(
