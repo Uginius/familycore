@@ -347,10 +347,10 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2025 FamilyCore · Меньше хаоса. Больше ясности. · <a href="mailto:contact@familycore.app">contact@familycore.app</a></p>
+  <p>© 2025 FamilyCore · Меньше хаоса. Больше ясности. · <a href="/cdn-cgi/l/email-protection#04676b6a70656770446265696d687d676b76612a657474"><span class="__cf_email__" data-cfemail="91f2feffe5f0f2e5d1f7f0fcf8fde8f2fee3f4bff0e1e1">[email&#160;protected]</span></a></p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Nav shadow on scroll
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
@@ -380,24 +380,43 @@ window.addEventListener('scroll', () => {
   });
 })();
 
-// Form submit
+// Form submit → Google Apps Script
+// ⬇ ВСТАВЬТЕ URL ВАШЕГО РАЗВЁРТЫВАНИЯ СЮДА ⬇
+var FORM_ACTION = 'https://script.google.com/macros/s/AKfycbx8PL2EcuHciP8frCInFb9tqjexmhuFhk97iUuQBegR_mR__5_SsqtK2OGAkqblsREq/exec';
+
 function handleSubmit(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('.cta-submit');
-  btn.textContent = '✓ Спасибо! Мы свяжемся.';
-  btn.style.background = '#3D8B6E';
+  var form = e.target;
+  var btn = form.querySelector('.cta-submit');
+  var origText = btn.textContent;
+
+  btn.textContent = 'Отправка…';
   btn.disabled = true;
+
+  var payload = {
+    name:    form.name.value.trim(),
+    email:   form.email.value.trim(),
+    message: form.message.value.trim()
+  };
+
+  fetch(FORM_ACTION, {
+    method: 'POST',
+    mode: 'no-cors',          // Apps Script не отдаёт CORS-заголовки
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+  .then(function () {
+    btn.textContent = '✓ Спасибо! Мы свяжемся.';
+    btn.style.background = '#3D8B6E';
+    form.reset();
+  })
+  .catch(function () {
+    btn.textContent = 'Ошибка — попробуйте ещё раз';
+    btn.style.background = '#C45D3E';
+    btn.disabled = false;
+    setTimeout(function () { btn.textContent = origText; }, 3000);
+  });
 }
 
 // Smooth anchor scroll
-document.querySelectorAll('a[href^="#"]').forEach((a) => {
-  a.addEventListener('click', (e) => {
-    e.preventDefault();
-    const t = document.querySelector(a.getAttribute('href'));
-    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
-</script>
-
-</body>
-</html>
+document.querySelectorAll('a[href^="#"]')
