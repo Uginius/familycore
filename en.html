@@ -24,19 +24,17 @@
       <a href="#values">Features</a>
       <a href="#faq">FAQ</a>
       <a href="index.html" class="nav-lang">RU</a>
-      <a href="#access" class="nav-cta">Early Access</a>
     </div>
   </div>
 </nav>
 
 <section class="hero" id="top">
   <div class="container">
-    <div class="hero-badge">Early access is open</div>
     <h1>&ldquo;I thought you were picking her up.&rdquo; <em>&ldquo;I&nbsp;never said I&nbsp;would.&rdquo;</em></h1>
     <p class="hero-sub">FamilyCore brings your family&rsquo;s tasks, plans, and agreements into one place&nbsp;&mdash; and makes sure nothing falls through the cracks. Everyone knows what&rsquo;s on them.</p>
     <div class="hero-actions">
-      <a href="#access" class="btn-primary">Get early access &rarr;</a>
-      <a href="#briefing" class="btn-secondary">See how it works</a>
+      <a href="#briefing" class="btn-primary">How it works &rarr;</a>
+      <a href="#problem" class="btn-secondary">Sound familiar?</a>
     </div>
   </div>
 </section>
@@ -246,36 +244,17 @@
   </div>
 </section>
 
-<section class="cta-section" id="access">
-  <div class="container">
-    <div class="section-label">Early Access</div>
-    <div class="section-title">Be the first to try it</div>
-    <p class="section-sub">Leave your email&nbsp;&mdash; we&rsquo;ll write when it&rsquo;s ready for your family. No spam.</p>
-    <form class="cta-form" id="ctaForm">
-      <div class="cta-row">
-        <input type="text" class="cta-input" placeholder="Name" id="field-name">
-        <input type="email" class="cta-input" placeholder="Email *" id="field-email" required>
-      </div>
-      <textarea class="cta-input" placeholder="What frustrates you most about family coordination?" id="field-message"></textarea>
-      <button type="submit" class="cta-submit" id="submitBtn">I want to try it</button>
-      <p class="cta-note">No spam&nbsp;&mdash; just an invite when it&rsquo;s ready.</p>
-    </form>
-  </div>
-</section>
-
 <footer>
   <p>&copy; 2025 FamilyCore &middot; Less chaos. More clarity. &middot; <a href="mailto:contact@familycore.app">contact@familycore.app</a></p>
 </footer>
 
 <script>
 (function() {
-  // Nav shadow
   var nav = document.getElementById('nav');
   window.addEventListener('scroll', function() {
     nav.classList.toggle('scrolled', window.scrollY > 20);
   });
 
-  // Scroll reveal
   var revealEls = document.querySelectorAll('.reveal');
   if (revealEls.length && 'IntersectionObserver' in window) {
     revealEls.forEach(function(el) { el.classList.add('reveal-ready'); });
@@ -293,41 +272,6 @@
     });
   }
 
-  // Form
-  var FORM_URL = 'https://script.google.com/macros/s/AKfycbx8PL2EcuHciP8frCInFb9tqjexmhuFhk97iUuQBegR_mR__5_SsqtK2OGAkqblsREq/exec';
-  var form = document.getElementById('ctaForm');
-  var btn = document.getElementById('submitBtn');
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    var orig = btn.textContent;
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-
-    var data = {
-      name: document.getElementById('field-name').value.trim(),
-      email: document.getElementById('field-email').value.trim(),
-      message: document.getElementById('field-message').value.trim()
-    };
-
-    fetch(FORM_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'text/plain' },
-      body: JSON.stringify(data)
-    }).then(function() {
-      btn.textContent = '\u2713 Thanks! We will be in touch.';
-      btn.style.background = '#3D8B6E';
-      form.reset();
-    }).catch(function() {
-      btn.textContent = 'Error \u2014 please try again';
-      btn.style.background = '#C45D3E';
-      btn.disabled = false;
-      setTimeout(function() { btn.textContent = orig; }, 3000);
-    });
-  });
-
-  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     a.addEventListener('click', function(e) {
       e.preventDefault();

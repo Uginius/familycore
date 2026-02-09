@@ -24,19 +24,17 @@
       <a href="#values">Возможности</a>
       <a href="#faq">Вопросы</a>
       <a href="en.html" class="nav-lang">EN</a>
-      <a href="#access" class="nav-cta">Ранний доступ</a>
     </div>
   </div>
 </nav>
 
 <section class="hero" id="top">
   <div class="container">
-    <div class="hero-badge">Ранний доступ открыт</div>
     <h1>&laquo;Я&nbsp;думала, ты заберёшь&raquo;. <em>&laquo;А&nbsp;я&nbsp;не&nbsp;обещал&raquo;.</em></h1>
     <p class="hero-sub">Семейное ядро собирает задачи, планы и&nbsp;договорённости семьи в&nbsp;одном месте&nbsp;&mdash; и&nbsp;следит, чтобы ничего не&nbsp;потерялось. Каждый знает, что на&nbsp;нём.</p>
     <div class="hero-actions">
-      <a href="#access" class="btn-primary">Попробовать первым &rarr;</a>
-      <a href="#briefing" class="btn-secondary">Как это выглядит</a>
+      <a href="#briefing" class="btn-primary">Как это работает &rarr;</a>
+      <a href="#problem" class="btn-secondary">Знакомая ситуация?</a>
     </div>
   </div>
 </section>
@@ -246,36 +244,17 @@
   </div>
 </section>
 
-<section class="cta-section" id="access">
-  <div class="container">
-    <div class="section-label">Ранний доступ</div>
-    <div class="section-title">Попробуйте первыми</div>
-    <p class="section-sub">Оставьте email&nbsp;&mdash; мы&nbsp;напишем, когда будет готово для вашей семьи. Без&nbsp;спама.</p>
-    <form class="cta-form" id="ctaForm">
-      <div class="cta-row">
-        <input type="text" class="cta-input" placeholder="Имя" id="field-name">
-        <input type="email" class="cta-input" placeholder="Email *" id="field-email" required>
-      </div>
-      <textarea class="cta-input" placeholder="Что больше всего раздражает в семейной организации?" id="field-message"></textarea>
-      <button type="submit" class="cta-submit" id="submitBtn">Хочу попробовать</button>
-      <p class="cta-note">Никакого спама&nbsp;&mdash; только приглашение, когда будет готово.</p>
-    </form>
-  </div>
-</section>
-
 <footer>
   <p>&copy; 2025 Семейное ядро &middot; Меньше хаоса. Больше ясности. &middot; <a href="mailto:contact@familycore.app">contact@familycore.app</a></p>
 </footer>
 
 <script>
 (function() {
-  // Nav shadow
   var nav = document.getElementById('nav');
   window.addEventListener('scroll', function() {
     nav.classList.toggle('scrolled', window.scrollY > 20);
   });
 
-  // Scroll reveal
   var revealEls = document.querySelectorAll('.reveal');
   if (revealEls.length && 'IntersectionObserver' in window) {
     revealEls.forEach(function(el) { el.classList.add('reveal-ready'); });
@@ -293,41 +272,6 @@
     });
   }
 
-  // Form
-  var FORM_URL = 'https://script.google.com/macros/s/AKfycbx8PL2EcuHciP8frCInFb9tqjexmhuFhk97iUuQBegR_mR__5_SsqtK2OGAkqblsREq/exec';
-  var form = document.getElementById('ctaForm');
-  var btn = document.getElementById('submitBtn');
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    var orig = btn.textContent;
-    btn.textContent = 'Отправка...';
-    btn.disabled = true;
-
-    var data = {
-      name: document.getElementById('field-name').value.trim(),
-      email: document.getElementById('field-email').value.trim(),
-      message: document.getElementById('field-message').value.trim()
-    };
-
-    fetch(FORM_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'text/plain' },
-      body: JSON.stringify(data)
-    }).then(function() {
-      btn.textContent = '\u2713 Спасибо! Мы свяжемся.';
-      btn.style.background = '#3D8B6E';
-      form.reset();
-    }).catch(function() {
-      btn.textContent = 'Ошибка \u2014 попробуйте ещё раз';
-      btn.style.background = '#C45D3E';
-      btn.disabled = false;
-      setTimeout(function() { btn.textContent = orig; }, 3000);
-    });
-  });
-
-  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     a.addEventListener('click', function(e) {
       e.preventDefault();
