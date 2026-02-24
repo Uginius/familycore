@@ -68,9 +68,10 @@ nav.scrolled { box-shadow: var(--shadow-sm); }
   border-radius: 8px;
 }
 .nav-logo-text {
-  font-family: var(--font-body); font-weight: 600;
+  font-family: var(--font-body); font-weight: 400;
   font-size: 15px; letter-spacing: -0.01em;
 }
+.nav-logo-text b { font-weight: 700; }
 .nav-logo-sub {
   font-size: 12px; color: var(--text-muted);
   font-weight: 400; margin-left: 2px;
@@ -260,16 +261,30 @@ section { padding: 100px 32px; }
 }
 .tl-content.tl-stress p { color: var(--text); }
 
-.timeline-conclusion {
-  text-align: center; margin-top: 56px;
-  padding-top: 40px; border-top: 1px solid var(--border);
+.timeline-bridge {
+  text-align: center; margin-top: 64px;
+  padding-top: 48px;
+  border-top: 1px solid var(--border);
 }
-.timeline-conclusion p {
+.bridge-arrow {
+  width: 48px; height: 48px; margin: 0 auto 20px;
+  border-radius: 50%;
+  background: var(--green-light);
+  color: var(--green);
+  font-size: 22px; font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+  animation: bounce-down 2s ease-in-out infinite;
+}
+.bridge-text {
   font-family: var(--font-display);
-  font-size: 1.5rem; color: var(--text-secondary);
+  font-size: 1.5rem; color: var(--text);
   line-height: 1.4;
 }
-.timeline-conclusion em { color: var(--accent); font-style: italic; }
+
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
 
 /* ===========================
    BRIEFING
@@ -514,11 +529,40 @@ textarea.cta-input { resize: vertical; min-height: 80px; }
 footer {
   background: var(--text);
   border-top: 1px solid rgba(255,255,255,0.08);
-  padding: 32px; text-align: center;
+  padding: 48px 32px;
 }
-footer p { font-size: 13px; color: rgba(255,255,255,0.3); }
-footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
-footer a:hover { color: rgba(255,255,255,0.6); }
+.footer-inner {
+  max-width: 1120px; margin: 0 auto;
+  display: flex; flex-direction: column; align-items: center; gap: 20px;
+}
+.footer-brand {
+  display: flex; align-items: center; gap: 10px;
+  color: rgba(255,255,255,0.7); font-weight: 400; font-size: 15px;
+}
+.footer-brand b { font-weight: 700; }
+.footer-logo { width: 28px; height: 28px; border-radius: 6px; }
+.footer-links {
+  display: flex; align-items: center; gap: 24px; flex-wrap: wrap; justify-content: center;
+}
+.footer-links a {
+  color: rgba(255,255,255,0.4); text-decoration: none;
+  font-size: 14px; font-weight: 500; transition: color 0.2s;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.footer-links a:hover { color: rgba(255,255,255,0.7); }
+.footer-tg {
+  padding: 6px 16px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+.footer-tg:hover {
+  border-color: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.05);
+}
+.footer-copy {
+  font-size: 13px; color: rgba(255,255,255,0.25); text-align: center;
+}
 
 /* ===========================
    ANIMATIONS
