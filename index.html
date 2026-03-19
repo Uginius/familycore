@@ -8,7 +8,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
 <style>
 :root {
   --navy: #2C3E50;
@@ -30,7 +30,7 @@
   --navy-soft: #EBF0F5;
   --green: #3A8C5C;
   --green-soft: #E2F0E8;
-  --font-display: 'Playfair Display', Georgia, serif;
+  --font-display: 'DM Serif Display', Georgia, serif;
   --font-body: 'Nunito', -apple-system, sans-serif;
   --radius: 16px;
   --radius-sm: 10px;
@@ -136,7 +136,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
 }
 
 .hero h1 {
-  font-family: var(--font-display); font-size: 3.2rem; font-weight: 600;
+  font-family: var(--font-display); font-size: 3.2rem; font-weight: 400;
   line-height: 1.18; letter-spacing: -0.02em; color: var(--navy);
   margin-bottom: 24px; animation: fadeInUp 0.6s 0.1s ease both;
   max-width: 700px; margin-left: auto; margin-right: auto;
@@ -163,7 +163,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
 .section-label::before { content: ''; width: 24px; height: 2px; background: var(--red); border-radius: 2px; }
 
 .section-title {
-  font-family: var(--font-display); font-size: 2.3rem; font-weight: 600;
+  font-family: var(--font-display); font-size: 2.3rem; font-weight: 400;
   line-height: 1.2; color: var(--navy); margin-bottom: 16px;
 }
 
@@ -231,7 +231,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
 
 .problem-cta { text-align: center; margin-top: 48px; }
 .problem-arrow { display: block; margin: 0 auto 16px; font-size: 1.6rem; color: var(--red); animation: bounce 2s infinite; }
-.problem-cta p { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; font-style: italic; color: var(--navy); }
+.problem-cta p { font-family: var(--font-display); font-size: 1.3rem; font-weight: 400; font-style: italic; color: var(--navy); }
 
 /* ===== BRIEFING SECTION ===== */
 .briefing-section { padding: 100px 0; }
@@ -290,7 +290,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
   gap: 16px; max-width: 680px; margin: 40px auto 0;
 }
 .value-item { display: flex; gap: 12px; padding: 16px; border-radius: var(--radius-sm); background: var(--bg-warm); }
-.value-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
+.value-icon { flex-shrink: 0; margin-top: 2px; display: flex; align-items: center; }
 .value-text h4 { font-size: 0.86rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
 .value-text p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.55; }
 
@@ -306,17 +306,17 @@ button { cursor: pointer; border: none; font-family: inherit; }
 .how-card:hover { box-shadow: var(--shadow-card); transform: translateY(-2px); }
 .how-card::before {
   content: attr(data-num); position: absolute; top: -12px; right: 16px;
-  font-family: var(--font-display); font-size: 5rem; font-weight: 700;
+  font-family: var(--font-display); font-size: 5rem; font-weight: 400;
   color: rgba(44,37,32,0.03); line-height: 1;
 }
 
 .how-card-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 20px; }
 
-.how-card h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--navy); margin-bottom: 12px; }
-.how-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
+.how-card h3 { font-family: var(--font-body); font-size: 1.2rem; font-weight: 800; color: var(--navy); margin-bottom: 12px; }
+.how-card p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.7; }
 
 .how-card .before-after { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.ba-item { padding: 12px; border-radius: var(--radius-sm); font-size: 0.82rem; line-height: 1.5; }
+.ba-item { padding: 14px; border-radius: var(--radius-sm); font-size: 0.85rem; line-height: 1.55; }
 .ba-item.before { background: rgba(44,37,32,0.04); color: var(--text-muted); }
 .ba-item.after { background: var(--green-soft); color: var(--green); }
 .ba-item strong { display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; opacity: 0.7; }
@@ -334,7 +334,7 @@ button { cursor: pointer; border: none; font-family: inherit; }
   pointer-events: none;
 }
 
-.cta-banner h2 { font-family: var(--font-display); font-size: 2.2rem; font-weight: 600; color: #fff; margin-bottom: 16px; position: relative; }
+.cta-banner h2 { font-family: var(--font-display); font-size: 2.2rem; font-weight: 400; color: #fff; margin-bottom: 16px; position: relative; }
 .cta-banner p { font-size: 1.05rem; color: rgba(255,255,255,0.6); margin-bottom: 36px; max-width: 480px; margin-left: auto; margin-right: auto; position: relative; }
 .cta-banner .btn-primary { position: relative; }
 
@@ -582,10 +582,10 @@ button { cursor: pointer; border: none; font-family: inherit; }
     </div>
 
     <div class="values-grid anim">
-      <div class="value-item"><div class="value-icon">✓</div><div class="value-text"><h4>Мониторит чаты с вашего разрешения</h4><p>Студия перенесла танцы? Школа отменила уроки? Ядро заметит и обновит контекст.</p></div></div>
-      <div class="value-item"><div class="value-icon">⚡</div><div class="value-text"><h4>Ответственность зафиксирована</h4><p>«Я заберу» — не сообщение в чат, а подтверждённая договорённость с именем и временем.</p></div></div>
-      <div class="value-item"><div class="value-icon">👤</div><div class="value-text"><h4>Каждый видит своё</h4><p>Андрей — страховку. Маша — свои задачи. Бабушка — расписание внуков.</p></div></div>
-      <div class="value-item"><div class="value-icon">🤖</div><div class="value-text"><h4>Показывает, а не решает</h4><p>Показывает, что дедушка свободен — вы решаете, кого попросить. Никаких автодействий.</p></div></div>
+      <div class="value-item"><div class="value-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="m9 11 2 2 4-4"/></svg></div><div class="value-text"><h4>Мониторит чаты с вашего разрешения</h4><p>Студия перенесла танцы? Школа отменила уроки? Ядро заметит и обновит контекст.</p></div></div>
+      <div class="value-item"><div class="value-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div class="value-text"><h4>Ответственность зафиксирована</h4><p>«Я заберу» — не сообщение в чат, а подтверждённая договорённость с именем и временем.</p></div></div>
+      <div class="value-item"><div class="value-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="value-text"><h4>Каждый видит своё</h4><p>Андрей — страховку. Маша — свои задачи. Бабушка — расписание внуков.</p></div></div>
+      <div class="value-item"><div class="value-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div><div class="value-text"><h4>Показывает, а не решает</h4><p>Показывает, что дедушка свободен — вы решаете, кого попросить. Никаких автодействий.</p></div></div>
     </div>
   </div>
 </section>
@@ -599,19 +599,19 @@ button { cursor: pointer; border: none; font-family: inherit; }
     </div>
     <div class="how-grid">
       <div class="how-card anim" data-num="01">
-        <div class="how-card-icon" style="background:var(--red-soft)">⚡</div>
+        <div class="how-card-icon" style="background:var(--red-soft)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"/><path d="m9 12 2 2 4-4"/></svg></div>
         <h3>Договорённости, а&nbsp;не&nbsp;задачи</h3>
         <p>Ничто не считается решённым, пока оба не сказали «да». Больше никаких «я думал, ты…».</p>
         <div class="before-after"><div class="ba-item before"><strong>Было</strong>«Забрать ребёнка» — задача в списке</div><div class="ba-item after"><strong>Стало</strong>Кто именно? Подтвердил? Когда?</div></div>
       </div>
       <div class="how-card anim" data-num="02">
-        <div class="how-card-icon" style="background:var(--green-soft)">📡</div>
+        <div class="how-card-icon" style="background:var(--green-soft)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01"/><path d="M12 10h.01"/><path d="M16 10h.01"/></svg></div>
         <h3>Читает ваши чаты — с вашего разрешения</h3>
         <p>Подключите чаты школы, кружков, врачей. Ядро заметит изменения и обновит контекст. Вы больше не пропустите перенос занятия.</p>
         <div class="before-after"><div class="ba-item before"><strong>Было</strong>Сообщение утонуло в 30 других</div><div class="ba-item after"><strong>Стало</strong>Изменение в брифинге — вы решаете</div></div>
       </div>
       <div class="how-card anim" data-num="03" style="grid-column:1/-1;max-width:560px;margin:0 auto">
-        <div class="how-card-icon" style="background:var(--gold-soft)">🛡️</div>
+        <div class="how-card-icon" style="background:var(--gold-soft)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C4942A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12h6"/><path d="M12 9v6"/></svg></div>
         <h3>Для реальных семей, а не рекламных</h3>
         <p>Несколько домов после развода. Няня, которой нужно расписание. Подросток с растущей автономией. Семейное ядро спроектировано для жизни.</p>
         <div class="before-after"><div class="ba-item before"><strong>Было</strong>«Пригласите семью» — мама, папа, 2 ребёнка</div><div class="ba-item after"><strong>Стало</strong>Роли, контексты, защитный режим</div></div>
