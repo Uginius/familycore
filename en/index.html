@@ -219,10 +219,13 @@
         Open the app
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
-      <div class="cta-features">
+      <div class="cta-features" id="cta-integrations">
         <span>✓ Works in browser</span>
         <span>✓ Telegram bot</span>
         <span>✓ VK bot</span>
+      </div>
+      <div style="margin-top:10px;font-size:13px;color:rgba(255,255,255,0.6)">
+        Region: <button id="region-switch" onclick="cycleRegion()" style="background:none;border:none;color:rgba(255,255,255,0.8);cursor:pointer;text-decoration:underline;font-size:13px">Global</button>
       </div>
     </div>
   </div>
@@ -306,6 +309,38 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   });
 });
+
+// ─── Region-based integrations (S4) ───
+const regionData = {
+  ru:     { label: 'Russia & CIS', features: ['✓ Works in browser', '✓ Telegram bot', '✓ VK bot', '✓ MAX (coming soon)'] },
+  eu:     { label: 'Europe',       features: ['✓ Works in browser', '✓ Telegram bot', '✓ WhatsApp (coming soon)'] },
+  global: { label: 'Global',       features: ['✓ Works in browser', '✓ Telegram bot'] },
+};
+const regionOrder = ['ru', 'eu', 'global'];
+let currentRegion = 'global';
+
+function detectRegion() {
+  const lang = (navigator.language || '').split('-')[0].toLowerCase();
+  if (lang === 'ru') return 'ru';
+  if (['de','fr','es','it','pt','nl','pl','cs','sv','da','fi','no'].includes(lang)) return 'eu';
+  return 'global';
+}
+
+function applyRegion(code) {
+  currentRegion = code;
+  const data = regionData[code];
+  const el = document.getElementById('cta-integrations');
+  const btn = document.getElementById('region-switch');
+  if (el) el.innerHTML = data.features.map(f => '<span>' + f + '</span>').join('');
+  if (btn) btn.textContent = data.label;
+}
+
+function cycleRegion() {
+  const idx = regionOrder.indexOf(currentRegion);
+  applyRegion(regionOrder[(idx + 1) % regionOrder.length]);
+}
+
+applyRegion(detectRegion());
 </script>
 
 </body>
